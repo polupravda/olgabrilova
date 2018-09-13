@@ -8,12 +8,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 body {
 	--color-text: #f1f1f1;
     --color-bg: #0c0c0c;
-    --color-link: #1ab3de;
+    --color-link: #40dddc;
     --color-link-hover: #f1f1f1;
 	--color-deco: #141414;
 	--color-side: #353535;
-	--color-project1: #142733;
-	font-family: Futura, "futura-pt", sans-serif;
+	--color-project1: #40dddc;
+	font-family: 'Poiret One', sans-serif;
+	/* font-family: Futura, "futura-pt", sans-serif; */
 	min-height: 100vh;
 	color: #57585c;
 	color: var(--color-text);
@@ -139,10 +140,12 @@ a:focus {
 	white-space: nowrap;
 }
 
-.github {
+.menu-item {
 	display: block;
 	padding: 0.25em;
 	margin: 0 0.25rem;
+	font-family: 'Poiret One', cursive;
+	letter-spacing: 0.1em;
 }
 
 .codrops-icon {
@@ -376,6 +379,11 @@ a:focus {
 .js .content__text,
 .js .content__close {
 	opacity: 0;
+}
+
+.name-holder {
+	display: flex;
+	justify-content: flex-end;
 }
 
 @media screen and (min-width: 53em) {
