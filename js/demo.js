@@ -8,7 +8,26 @@
  * Copyright 2018, Codrops
  * http://www.codrops.com
  */
+
+
+// var menuItem = document.querySelectorAll(".menu-item");
+// var test = document.querySelector(".test");
+// for(var i = 0 ; i < menuItem.length; i++) {
+//     menuItem[i].addEventListener('mouseover',function() {
+//         test.classList.add('test-class');
+//     });
+//   }
+
+var menuItem = document.querySelectorAll(".menu-item-home");
+var test = document.querySelector(".test");
+for(var i = 0 ; i < menuItem.length; i++) {
+    menuItem[i].addEventListener('mouseover',function() {
+        test.classList.add('test-class');
+    });
+  }
+
 {
+
     // From http://www.quirksmode.org/js/events_properties.html#position
     // Get the mouse position.
 	const getMousePos = (e) => {
@@ -366,11 +385,12 @@
             this.DOM.text = this.DOM.el.querySelector('.content__text');
             this.DOM.backCtrl = this.DOM.el.parentNode.querySelector('.content__close');
             this.DOM.backCtrl.addEventListener('click', () => slideshow.hideContent());
+            this.DOM.demo = this.DOM.el.querySelector('.content__image');
         }
         show() {
             this.DOM.el.classList.add('content__item--current');
 
-            TweenMax.staggerTo([this.DOM.backCtrl,this.DOM.number,this.DOM.title,this.DOM.subtitle,this.DOM.text], 0.8, {
+            TweenMax.staggerTo([this.DOM.backCtrl,this.DOM.number,this.DOM.title,this.DOM.subtitle,this.DOM.text,this.DOM.demo], 0.8, {
                 ease: Power4.easeOut,
                 delay: 0.4,
                 opacity: 1,
@@ -381,7 +401,7 @@
         hide() {
             this.DOM.el.classList.remove('content__item--current');
 
-            TweenMax.staggerTo([this.DOM.backCtrl,this.DOM.number,this.DOM.title,this.DOM.subtitle,this.DOM.text].reverse(), 0.3, {
+            TweenMax.staggerTo([this.DOM.backCtrl,this.DOM.number,this.DOM.title,this.DOM.subtitle,this.DOM.text,this.DOM.demo].reverse(), 0.3, {
                 ease: Power3.easeIn,
                 opacity: 0,
                 y: 10
@@ -590,4 +610,5 @@
     // Preload all the images in the page..
     const loader = document.querySelector('.loader');
     imagesLoaded(document.querySelectorAll('.slide__img'), {background: true}, () => document.body.classList.remove('loading'));
+
 }
