@@ -52,6 +52,10 @@ body {
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
 }
 
+.animated {
+	opacity: 0;
+}
+
 @keyframes loaderAnim {
 	to {
 		opacity: 1;
