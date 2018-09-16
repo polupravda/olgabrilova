@@ -15,13 +15,13 @@
     // .from(slideSubtitle, 0.3, {y: -15, autoAlpha: 0, ease:Power1.easeOut})
 
     (function($) {
-        var slideshowDeco = $('.slideshow__deco'),
-            slideImg = $('.slide__img'),
+        var slideshowDeco = $('.slideshow__deco-home'),
+            slideImg = $('.slide__img-home'),
             tl = new TimelineMax();
     
         tl
             .fromTo(slideshowDeco, 0.5, {opacity: 0, scale: 5}, {opacity: 1, scale: 1, ease: SlowMo.easeOut})
-            .fromTo(slideImg, 0.5, {opacity: 0, y: 200}, {opacity: 1, y: 50}, '-=0.1')
+            .fromTo(slideImg, 0.5, {opacity: 0, y: 200}, {opacity: 1, y: 10}, '-=0.1')
     })(jQuery);
 
     // tl.pause();
